@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>ทดสอบการประกาศข่าวสารทาง Feed RSS</title>
+        <description>IDS System</description>
+        <link>smo.it.kmitl.ac.th:8080/IDS</link>
+        <lastBuildDate>Mon, 06 Sep 2010 00:01:00 +0000 </lastBuildDate>
+        <pubDate>Mon, 06 Sep 2010 00:01:00 +0000 </pubDate>
+        <item>
+            <title>Sample News</title>
+            <description>This is a sample news</description>
+            <link>javascript:showNewsDialog('1');</link>
+            <guid>Read This</guid>
+            <pubDate>2012-01-14 00:00:00.0</pubDate>
+        </item>
+        <item>
+            <title>New York Times: ทำไมแอปเปิลต้องเลือกผลิตสินค้าในจีน</title>
+            <description>ช่วงใกล้เวลาเลือกตั้งในสหรัฐ ก็เป็นเรื่องปกติที่นักการเมืองแต่ละฝ่ายจะออกมาพูดถึงปัจจัยต่าง ๆ ที่ส่งผลกระทบต่อเศรษฐกิจของประเทศ โดยก่อนหน้านี้ผู้สมัครเข้าชิงตำแหน่งประธานาธิบดีของสหรัฐจากพรรครีพับลิกันได้ออกมาบอกว่าแอปเปิลเป็นหนึ่งในธุรกิจที่ทำให้อเมริกาสูญเสียรายได้เพราะแอปเปิลสั่งผลิตสินค้าของตัวเองจากประเทศจีน</description>
+            <link>javascript:showNewsDialog('2');</link>
+            <guid>Read This</guid>
+            <pubDate>2012-01-15 00:00:00.0</pubDate>
+        </item>
+        <item>
+            <title>RapidShare มั่นใจ ไม่กลัวโดนยึดเซิร์ฟเวอร์แบบ Megaupload</title>
+            <description>ประเด็นเรื่อง เอฟบีไอปิดเว็บ Megaupload - สั่งจับทีมงานเว็บ กลายเป็นข่าวใหญ่อีกข่าวของวงการไอทีสหรัฐ และเกิดคำถามขึ้นทันทีว่าเว็บไซต์อื่นๆ โดยเฉพาะเว็บที่มีบริการคล้ายๆ กันจะโดนปิดแบบเดียวกันหรือไม่</description>
+            <link>javascript:showNewsDialog('3');</link>
+            <guid>Read This</guid>
+            <pubDate>2012-01-16 00:00:00.0</pubDate>
+        </item>
+        <item>
+            <title>test1</title>
+            <description/>
+            <link>javascript:showNewsDialog('4');</link>
+            <guid>Read This</guid>
+            <pubDate>2012-01-15 00:00:00.0</pubDate>
+        </item>
+        <item>
+            <title>ทดสอบบบบ</title>
+            <description>ทอสอบบบ</description>
+            <link>javascript:showNewsDialog('5');</link>
+            <guid>Read This</guid>
+            <pubDate>2012-01-17 00:00:00.0</pubDate>
+        </item>
+        <item>
+            <title>มวยคู่ใหม่ Eye-Fi กับ SD Association เรื่องการใส่ Wi-Fi ใน SD</title>
+            <description>การ์ด SD แบบมี Wi-Fi ในตัวนั้นเจ้าแรกๆ ที่ทำออกมาคงเป็นของบริษัท Eye-Fi ที่หลังจากทำตลาดมาหลายต่อหลายปี สินค้าตัวนี้ก็เริ่มได้รับความนิยมระดับหนึ่ง ผู้ผลิตกล้องจำนวนหนึ่งเริ่มรองรับเมนู Eye-Fi ในกล้องของตัวเอง แต่ช่วงหลังๆ ผู้ผลิตรายอื่นๆ เช่น โตชิบาก็เริ่มเปิดตัวสินค้าในกลุ่มเดียวกัน จนกระทั่ง SD Association (SDA) หน่วยงานมาตรฐานกลางของ SD เตรียมออกมาตรฐานอย่างเป็นทางการ</description>
+            <link>javascript:showNewsDialog('9');</link>
+            <guid>Read This</guid>
+            <pubDate/>
+        </item>
+    </channel>
+</rss>
