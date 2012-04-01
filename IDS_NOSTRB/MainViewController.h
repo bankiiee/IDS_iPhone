@@ -17,6 +17,8 @@
     BOOL isReadingTitle ;
     BOOL isReadingLink ;
     BOOL isReadingDescription ;
+    BOOL isWaitingForNewsID;
+    BOOL isReadingNewsID;
     int numberOfElement;
     //BOOL isWaitingForBody;
     UITextField *toField;

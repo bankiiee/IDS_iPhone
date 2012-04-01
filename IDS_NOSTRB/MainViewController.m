@@ -73,11 +73,11 @@
     isReadingDescription = NO;
     numberOfElement = 0;
     //isWaitingForBody = NO;
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"idsfeed" ofType:@"xml"];
-    NSData *myData = [NSData dataWithContentsOfFile:filePath];
+//    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"idsfeed" ofType:@"xml"];
+//    NSData *myData = [NSData dataWithContentsOfFile:filePath];
     
-    //    NSURL *url = [NSURL URLWithString:@"http://www.engadget.com/rss.xml"];
-    //    NSData *myData = [NSData dataWithContentsOfURL:url];
+       NSURL *url = [NSURL URLWithString:@"http://localhost:8084/IDS/idsfeed.xml"];
+        NSData *myData = [NSData dataWithContentsOfURL:url];
     if (myData) {
         // Start parsing
         NSXMLParser *parser = [[NSXMLParser alloc] initWithData:myData];
@@ -106,16 +106,18 @@
     isWaitingForTitle = NO;
     isWaitingForLink = NO;
     isWaitingForDescription = NO;
+    isWaitingForNewsID = NO;
     isReadingTitle = NO;
     isReadingLink = NO;
     isReadingDescription = NO;
+    isReadingNewsID = NO;
     numberOfElement = 0;
-    //isWaitingForBody = NO;
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"idsfeed" ofType:@"xml"];
-    NSData *myData = [NSData dataWithContentsOfFile:filePath];
+//    //isWaitingForBody = NO;
+//    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"idsfeed" ofType:@"xml"];
+//    NSData *myData = [NSData dataWithContentsOfFile:filePath];
     
-//    NSURL *url = [NSURL URLWithString:@"http://www.engadget.com/rss.xml"];
-//    NSData *myData = [NSData dataWithContentsOfURL:url];
+    NSURL *url = [NSURL URLWithString:@"http://localhost:8084/IDS/idsfeed.xml"];
+    NSData *myData = [NSData dataWithContentsOfURL:url];
     if (myData) {
         // Start parsing
         NSXMLParser *parser = [[NSXMLParser alloc] initWithData:myData];
@@ -141,6 +143,7 @@
         isWaitingForTitle = NO;
         isWaitingForDescription = YES;
         isWaitingForLink = YES;
+        isWaitingForNewsID = YES;
         isReadingTitle = YES;
     }
     if ([elementName isEqualToString:@"description"]) {
@@ -148,18 +151,30 @@
         isWaitingForTitle = NO;
         isWaitingForDescription = NO;
         isWaitingForLink = YES;
+        isWaitingForNewsID = YES;
         isReadingDescription = YES;
 
 
     }
-    if ([elementName isEqualToString:@"link"]) {
+    if ([elementName isEqualToString:@"attachment"]) {
         NSLog(@"<--- Start %@ ---> ", elementName);
         isWaitingForTitle = NO;
         isWaitingForDescription = NO;
         isWaitingForLink = NO;
+        isWaitingForNewsID = YES;
         isReadingLink = YES;
 
     }
+    if ([elementName isEqualToString:@"newsid"]) {
+        NSLog(@"<--- Start %@ ---> ", elementName);
+        isWaitingForTitle = NO;
+        isWaitingForDescription = NO;
+        isWaitingForLink = NO;
+        isWaitingForNewsID = NO;
+        isReadingNewsID = YES;
+        
+    }
+
 
 }
 
@@ -174,9 +189,14 @@
         [self.feedElement setObject:string forKey:@"description"];
     }
     if(isReadingLink == YES){
-        NSLog(@"Found LINK %@", string);
-        [self.feedElement setObject:string forKey:@"link"];
+        NSLog(@"Found ATTCH %@", string);
+        [self.feedElement setObject:string forKey:@"attachment"];
 
+    }
+    if(isReadingNewsID == YES){
+        NSLog(@"Found NewsID %@", string);
+        [self.feedElement setObject:string forKey:@"newsid"];
+        
     }
 //    
 }
@@ -191,8 +211,12 @@
         isReadingDescription = NO;
         NSLog(@"<--- End Element %@ ---> ", elementName);
     }
-    if ([elementName isEqualToString:@"link"]) {
+    if ([elementName isEqualToString:@"attachment"]) {
         isReadingLink = NO;
+        NSLog(@"<--- End Element %@ ---> ", elementName);
+    }
+    if ([elementName isEqualToString:@"newsid"]) {
+        isReadingNewsID = NO;
         NSLog(@"<--- End Element %@ ---> ", elementName);
         
         [self.feed addObject:self.feedElement];
@@ -325,7 +349,11 @@
      */
     NSLog(@"%@",[[self.feed objectAtIndex:indexPath.row]objectForKey:@"description"]);
     DetailViewController *detailViewController = [[DetailViewController alloc]init];
-    detailViewController.detail = [[self.feed objectAtIndex:indexPath.row]objectForKey:@"description"];
+    detailViewController.topic = [[self.feed objectAtIndex:indexPath.row]objectForKey:@"title"];
+    detailViewController.story = [[self.feed objectAtIndex:indexPath.row]objectForKey:@"description"];
+    detailViewController.picPath = [[self.feed objectAtIndex:indexPath.row]objectForKey:@"attachment"];
+    detailViewController.newsid = [[self.feed objectAtIndex:indexPath.row]objectForKey:@"newsid"];
+
     [self.navigationController pushViewController:detailViewController animated:YES];
     
     

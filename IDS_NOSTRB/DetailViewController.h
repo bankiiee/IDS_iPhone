@@ -7,8 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Twitter/Twitter.h>
 
-@interface DetailViewController : UIViewController
-@property (nonatomic, retain) NSString *detail;
+
+@interface DetailViewController : UIViewController<NSURLConnectionDelegate>
+@property (nonatomic, retain) NSString *topic;
+@property (nonatomic,retain) NSString *story;
+@property (nonatomic,retain)NSString *picPath;
+@property (nonatomic,retain)NSString *newsid;
+@property (nonatomic,retain) NSMutableData *responseData;
 @property (weak, nonatomic) IBOutlet UILabel *detailLabel;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UIImageView *picView;
+@property (weak, nonatomic) UIViewController *tweetView;
 @end
