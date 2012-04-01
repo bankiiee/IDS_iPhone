@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface LecturerDetailViewController : UIViewController
-
+@property (nonatomic, retain) NSString *name;
+@property (nonatomic,retain) NSString *room;
+@property (nonatomic,retain)NSString *status;
+@property (nonatomic,retain)NSString *lid;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *roomLabel;
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @end

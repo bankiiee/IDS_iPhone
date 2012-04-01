@@ -53,7 +53,7 @@
     self.indicator.center = self.view.center;
     [self.indicator startAnimating];
     //Load web view data
-    NSString *strWebsiteUlr = [NSString stringWithFormat:@"http://www.it.kmitl.ac.th"];
+    NSString *strWebsiteUlr = [NSString stringWithFormat:@"http://smo.it.kmitl.ac.th:8088/IDS/m"];
     
     // Load URL
     

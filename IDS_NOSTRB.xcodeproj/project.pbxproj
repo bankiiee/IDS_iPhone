@@ -263,6 +263,8 @@
 		81F7593814CE9DBD00ABB7F7 /* Member_CD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 81F7593614CE9DBD00ABB7F7 /* Member_CD.xcdatamodeld */; };
 		81F7593D14CE9F8800ABB7F7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F7593C14CE9F8800ABB7F7 /* CoreData.framework */; };
 		81F7594014CEA72400ABB7F7 /* Member.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F7593F14CEA72400ABB7F7 /* Member.m */; };
+		81F8DCBF1528EDE8000BD077 /* LecturerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F8DCBD1528EDE8000BD077 /* LecturerDetailViewController.m */; };
+		81F8DCC01528EDE8000BD077 /* LecturerDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81F8DCBE1528EDE8000BD077 /* LecturerDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -551,6 +553,9 @@
 		81F7593C14CE9F8800ABB7F7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		81F7593E14CEA72300ABB7F7 /* Member.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Member.h; sourceTree = "<group>"; };
 		81F7593F14CEA72400ABB7F7 /* Member.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Member.m; sourceTree = "<group>"; };
+		81F8DCBC1528EDE8000BD077 /* LecturerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LecturerDetailViewController.h; sourceTree = "<group>"; };
+		81F8DCBD1528EDE8000BD077 /* LecturerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LecturerDetailViewController.m; sourceTree = "<group>"; };
+		81F8DCBE1528EDE8000BD077 /* LecturerDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LecturerDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -933,7 +938,8 @@
 				81F7577C14CE8BDF00ABB7F7 /* SettingViewController.m */,
 				81D8F2B914D4AEEB007975A6 /* DeveloperSettingViewController.h */,
 				81D8F2BA14D4AEEB007975A6 /* DeveloperSettingViewController.m */,
-				81D8F2BB14D4AEEC007975A6 /* DeveloperSettingViewController.xib */,
+				81F8DCBC1528EDE8000BD077 /* LecturerDetailViewController.h */,
+				81F8DCBD1528EDE8000BD077 /* LecturerDetailViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -941,6 +947,8 @@
 		81F7593114CE97BC00ABB7F7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				81D8F2BB14D4AEEC007975A6 /* DeveloperSettingViewController.xib */,
+				81F8DCBE1528EDE8000BD077 /* LecturerDetailViewController.xib */,
 				81E662E2150EF10800CCD64F /* DispatchViewController.xib */,
 				819ABB421505C01600BE16B3 /* AboutViewController.xib */,
 				81F7579314CE932B00ABB7F7 /* SampleWebViewController.xib */,
@@ -1248,6 +1256,7 @@
 				819ABB441505C01600BE16B3 /* AboutViewController.xib in Resources */,
 				81E662E4150EF10800CCD64F /* DispatchViewController.xib in Resources */,
 				81E6633B150F0D9F00CCD64F /* data.plist in Resources */,
+				81F8DCC01528EDE8000BD077 /* LecturerDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1299,6 +1308,7 @@
 				81D44CA015026F1900E3B49A /* LecturerListViewController.m in Sources */,
 				819ABB431505C01600BE16B3 /* AboutViewController.m in Sources */,
 				81E662E3150EF10800CCD64F /* DispatchViewController.m in Sources */,
+				81F8DCBF1528EDE8000BD077 /* LecturerDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
