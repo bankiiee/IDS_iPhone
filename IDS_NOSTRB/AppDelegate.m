@@ -48,7 +48,9 @@
     }
 
    // MainViewController *main = [[MainViewController alloc]init];
-    NSLog(@"%@",[self.userPref boolForKey:@"isLogin"]);
+    self.userPref = [NSUserDefaults standardUserDefaults];
+    
+  //  NSLog(@"From userdefaults %@",[self.userPref boolForKey:@"isLogin"]);
     if(![self.userPref boolForKey:@"isLogin"]){
         [self loginButtonPressed];
     }
@@ -63,7 +65,7 @@
     UINavigationController *aboutNav = [[UINavigationController alloc]initWithRootViewController:aboutView];
 
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:nav1,nav2,nav3,sampleWeb,aboutNav,nil];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:nav1,nav3,sampleWeb,aboutNav,nil];
     //add navigation controller
     self.navigationController = [[UINavigationController alloc]init];
     
@@ -104,25 +106,27 @@
     if(alertView.tag == 1){
     if(buttonIndex == 0){
     UITextField *username = [alertView textFieldAtIndex:0];
-       // [username setText:@"it51070089"];
+        [username setText:@"it51070089"];
     UITextField *password = [alertView textFieldAtIndex:1];
-        //[password setText:@"9ddt+9ddt"];
-   // BOOL result = [self doLogin:username.text andPassword:password.text];
-        BOOL result = YES;   
+        [password setText:@"9ddt+9ddt"];
+    BOOL result = [self doLogin:username.text andPassword:password.text];
+       // BOOL result = YES;   
         if(result){
-            //[self showWithLabel:self AndUsername:[self doQueryNameFromUsername:username.text]];
+            [self showWithLabel:self AndUsername:[self doQueryNameFromUsername:username.text]];
             NSLog(@"username is %@, and password is %@",username.text, password.text);
             
             // [self addMember:nil];
-            //  [self fetchRecords];
-           // self.usernameStr = [self doQueryNameFromUsername:username.text];
-            //  [self saveData];
+             //[self fetchRecords];
+            self.usernameStr = [self doQueryNameFromUsername:username.text];
+              //[self saveData];
             [self.userPref setBool:YES forKey:@"isLogin"];
+            [self.userPref setValue:username.text forKey:@"username"];
             [self.userPref synchronize];
 
         }else{
 //            UIActionSheet *error = [[UIActionSheet alloc]initWithTitle:@"Invalid Username and Password" delegate:self cancelButtonTitle:@"Try Again" destructiveButtonTitle:@"Cancel" otherButtonTitles:nil, nil];
 //            [error showInView:self.window];
+            
             UIAlertView *error = [[UIAlertView alloc]initWithTitle:@"Invalid Username or Password" message:@"Please try again" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Try Again",@"Cancel" ,nil];
             [error setTag:2];
             [error show];
@@ -161,7 +165,7 @@
     NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    [request setURL:[NSURL URLWithString:@"http://169.254.18.105:8084/IDS/MobileDoLoginServlet?"]];
+    [request setURL:[NSURL URLWithString:@"http://localhost:8084/IDS/MobileDoLoginServlet?"]];
     [request setHTTPMethod:@"POST"];
     [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
     [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
@@ -181,7 +185,7 @@
 -(NSString *)doQueryNameFromUsername:(NSString *)username{
         
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    NSString *url = [NSString stringWithFormat:@"http://169.254.18.105:8084/IDS/mobileQuery.jsp?username=%@", username];
+    NSString *url = [NSString stringWithFormat:@"http://localhost:8084/IDS/mobileQuery.jsp?username=%@", username];
     [request setURL:[NSURL URLWithString:url]];
    
     

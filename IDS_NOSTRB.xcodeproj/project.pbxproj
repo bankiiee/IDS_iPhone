@@ -51,15 +51,11 @@
 		81F7577F14CE8BDF00ABB7F7 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F7577114CE8BDF00ABB7F7 /* DetailViewController.m */; };
 		81F7578014CE8BDF00ABB7F7 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81F7577214CE8BDF00ABB7F7 /* DetailViewController.xib */; };
 		81F7578114CE8BDF00ABB7F7 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F7577314CE8BDF00ABB7F7 /* arrow.png */; };
-		81F7578214CE8BDF00ABB7F7 /* IDS_Logo@1X.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F7577414CE8BDF00ABB7F7 /* IDS_Logo@1X.png */; };
-		81F7578314CE8BDF00ABB7F7 /* IDS_Logo@2X_For_Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F7577514CE8BDF00ABB7F7 /* IDS_Logo@2X_For_Retina.png */; };
 		81F7578414CE8BDF00ABB7F7 /* WelcomePage@2X_For_Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F7577614CE8BDF00ABB7F7 /* WelcomePage@2X_For_Retina.png */; };
 		81F7578514CE8BDF00ABB7F7 /* NewsTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F7577814CE8BDF00ABB7F7 /* NewsTypeViewController.m */; };
 		81F7578714CE8BDF00ABB7F7 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F7577C14CE8BDF00ABB7F7 /* SettingViewController.m */; };
 		81F7579414CE932C00ABB7F7 /* SampleWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F7579214CE932B00ABB7F7 /* SampleWebViewController.m */; };
 		81F7579514CE932C00ABB7F7 /* SampleWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81F7579314CE932B00ABB7F7 /* SampleWebViewController.xib */; };
-		81F7579B14CE96F200ABB7F7 /* IDS_Logo@1X.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F7579A14CE96F200ABB7F7 /* IDS_Logo@1X.png */; };
-		81F7579D14CE96F800ABB7F7 /* IDS_Logo@2X_For_Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F7579C14CE96F800ABB7F7 /* IDS_Logo@2X_For_Retina.png */; };
 		81F7586714CE977E00ABB7F7 /* 01-refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F7579F14CE977E00ABB7F7 /* 01-refresh.png */; };
 		81F7586814CE977E00ABB7F7 /* 02-redo.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F757A014CE977E00ABB7F7 /* 02-redo.png */; };
 		81F7586914CE977E00ABB7F7 /* 03-loopback.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F757A114CE977E00ABB7F7 /* 03-loopback.png */; };
@@ -265,6 +261,11 @@
 		81F7594014CEA72400ABB7F7 /* Member.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F7593F14CEA72400ABB7F7 /* Member.m */; };
 		81F8DCBF1528EDE8000BD077 /* LecturerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F8DCBD1528EDE8000BD077 /* LecturerDetailViewController.m */; };
 		81F8DCC01528EDE8000BD077 /* LecturerDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81F8DCBE1528EDE8000BD077 /* LecturerDetailViewController.xib */; };
+		81F8DCCB1528FB0F000BD077 /* ids_logo@1X.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F8DCC91528FB0F000BD077 /* ids_logo@1X.png */; };
+		81F8DCCC1528FB0F000BD077 /* ids_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F8DCCA1528FB0F000BD077 /* ids_logo@2x.png */; };
+		81F8DCCE1528FC10000BD077 /* WelcomePage@2X_For_Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F8DCCD1528FC10000BD077 /* WelcomePage@2X_For_Retina.png */; };
+		81F8DCD01528FC19000BD077 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F8DCCF1528FC19000BD077 /* Default.png */; };
+		81F8DCD21528FC1C000BD077 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F8DCD11528FC1C000BD077 /* Default@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -337,8 +338,6 @@
 		81F7577114CE8BDF00ABB7F7 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		81F7577214CE8BDF00ABB7F7 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		81F7577314CE8BDF00ABB7F7 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow.png; path = ../arrow.png; sourceTree = "<group>"; };
-		81F7577414CE8BDF00ABB7F7 /* IDS_Logo@1X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "IDS_Logo@1X.png"; path = "../IDS_Logo@1X.png"; sourceTree = "<group>"; };
-		81F7577514CE8BDF00ABB7F7 /* IDS_Logo@2X_For_Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "IDS_Logo@2X_For_Retina.png"; path = "../IDS_Logo@2X_For_Retina.png"; sourceTree = "<group>"; };
 		81F7577614CE8BDF00ABB7F7 /* WelcomePage@2X_For_Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "WelcomePage@2X_For_Retina.png"; path = "../WelcomePage@2X_For_Retina.png"; sourceTree = "<group>"; };
 		81F7577714CE8BDF00ABB7F7 /* NewsTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTypeViewController.h; sourceTree = "<group>"; };
 		81F7577814CE8BDF00ABB7F7 /* NewsTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTypeViewController.m; sourceTree = "<group>"; };
@@ -347,8 +346,6 @@
 		81F7579114CE932B00ABB7F7 /* SampleWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleWebViewController.h; sourceTree = "<group>"; };
 		81F7579214CE932B00ABB7F7 /* SampleWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleWebViewController.m; sourceTree = "<group>"; };
 		81F7579314CE932B00ABB7F7 /* SampleWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleWebViewController.xib; sourceTree = "<group>"; };
-		81F7579A14CE96F200ABB7F7 /* IDS_Logo@1X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IDS_Logo@1X.png"; sourceTree = "<group>"; };
-		81F7579C14CE96F800ABB7F7 /* IDS_Logo@2X_For_Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IDS_Logo@2X_For_Retina.png"; sourceTree = "<group>"; };
 		81F7579F14CE977E00ABB7F7 /* 01-refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01-refresh.png"; sourceTree = "<group>"; };
 		81F757A014CE977E00ABB7F7 /* 02-redo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "02-redo.png"; sourceTree = "<group>"; };
 		81F757A114CE977E00ABB7F7 /* 03-loopback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "03-loopback.png"; sourceTree = "<group>"; };
@@ -556,6 +553,11 @@
 		81F8DCBC1528EDE8000BD077 /* LecturerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LecturerDetailViewController.h; sourceTree = "<group>"; };
 		81F8DCBD1528EDE8000BD077 /* LecturerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LecturerDetailViewController.m; sourceTree = "<group>"; };
 		81F8DCBE1528EDE8000BD077 /* LecturerDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LecturerDetailViewController.xib; sourceTree = "<group>"; };
+		81F8DCC91528FB0F000BD077 /* ids_logo@1X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ids_logo@1X.png"; sourceTree = "<group>"; };
+		81F8DCCA1528FB0F000BD077 /* ids_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ids_logo@2x.png"; sourceTree = "<group>"; };
+		81F8DCCD1528FC10000BD077 /* WelcomePage@2X_For_Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "WelcomePage@2X_For_Retina.png"; path = "IDS_NOSTRB/WelcomePage@2X_For_Retina.png"; sourceTree = "<group>"; };
+		81F8DCCF1528FC19000BD077 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		81F8DCD11528FC1C000BD077 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -601,6 +603,8 @@
 		81F7571414CE8AE700ABB7F7 = {
 			isa = PBXGroup;
 			children = (
+				81F8DCD11528FC1C000BD077 /* Default@2x.png */,
+				81F8DCCF1528FC19000BD077 /* Default.png */,
 				81F229561528BCE100063038 /* Twitter.framework */,
 				81E6633A150F0D9F00CCD64F /* data.plist */,
 				81005EBB150BBF500063CB02 /* CFNetwork.framework */,
@@ -609,8 +613,9 @@
 				8190F24014CF1D3A0040551A /* libxml2.dylib */,
 				8190F23D14CF1CCA0040551A /* libxml2.2.7.3.dylib */,
 				81CC3C8714D062170093CAFC /* idsfeed.xml */,
-				81F7579C14CE96F800ABB7F7 /* IDS_Logo@2X_For_Retina.png */,
-				81F7579A14CE96F200ABB7F7 /* IDS_Logo@1X.png */,
+				81F8DCC91528FB0F000BD077 /* ids_logo@1X.png */,
+				81F8DCCD1528FC10000BD077 /* WelcomePage@2X_For_Retina.png */,
+				81F8DCCA1528FB0F000BD077 /* ids_logo@2x.png */,
 				81F7572914CE8AE700ABB7F7 /* IDS_NOSTRB */,
 				81F7575B14CE8AE700ABB7F7 /* IDS_NOSTRBTests */,
 				81F7572214CE8AE700ABB7F7 /* Frameworks */,
@@ -695,8 +700,6 @@
 				81F7573F14CE8AE700ABB7F7 /* second.png */,
 				81F7574114CE8AE700ABB7F7 /* second@2x.png */,
 				81F7577314CE8BDF00ABB7F7 /* arrow.png */,
-				81F7577414CE8BDF00ABB7F7 /* IDS_Logo@1X.png */,
-				81F7577514CE8BDF00ABB7F7 /* IDS_Logo@2X_For_Retina.png */,
 				81F7577614CE8BDF00ABB7F7 /* WelcomePage@2X_For_Retina.png */,
 				81F7579F14CE977E00ABB7F7 /* 01-refresh.png */,
 				81F757A014CE977E00ABB7F7 /* 02-redo.png */,
@@ -1043,12 +1046,8 @@
 				81F7574E14CE8AE700ABB7F7 /* SecondViewController_iPad.xib in Resources */,
 				81F7578014CE8BDF00ABB7F7 /* DetailViewController.xib in Resources */,
 				81F7578114CE8BDF00ABB7F7 /* arrow.png in Resources */,
-				81F7578214CE8BDF00ABB7F7 /* IDS_Logo@1X.png in Resources */,
-				81F7578314CE8BDF00ABB7F7 /* IDS_Logo@2X_For_Retina.png in Resources */,
 				81F7578414CE8BDF00ABB7F7 /* WelcomePage@2X_For_Retina.png in Resources */,
 				81F7579514CE932C00ABB7F7 /* SampleWebViewController.xib in Resources */,
-				81F7579B14CE96F200ABB7F7 /* IDS_Logo@1X.png in Resources */,
-				81F7579D14CE96F800ABB7F7 /* IDS_Logo@2X_For_Retina.png in Resources */,
 				81F7586714CE977E00ABB7F7 /* 01-refresh.png in Resources */,
 				81F7586814CE977E00ABB7F7 /* 02-redo.png in Resources */,
 				81F7586914CE977E00ABB7F7 /* 03-loopback.png in Resources */,
@@ -1257,6 +1256,11 @@
 				81E662E4150EF10800CCD64F /* DispatchViewController.xib in Resources */,
 				81E6633B150F0D9F00CCD64F /* data.plist in Resources */,
 				81F8DCC01528EDE8000BD077 /* LecturerDetailViewController.xib in Resources */,
+				81F8DCCB1528FB0F000BD077 /* ids_logo@1X.png in Resources */,
+				81F8DCCC1528FB0F000BD077 /* ids_logo@2x.png in Resources */,
+				81F8DCCE1528FC10000BD077 /* WelcomePage@2X_For_Retina.png in Resources */,
+				81F8DCD01528FC19000BD077 /* Default.png in Resources */,
+				81F8DCD21528FC1C000BD077 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

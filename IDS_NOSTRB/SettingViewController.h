@@ -12,6 +12,7 @@
 @interface SettingViewController : UITableViewController<UIActionSheetDelegate,MBProgressHUDDelegate>
 
 @property (nonatomic, retain) MBProgressHUD *HUD;
+@property (nonatomic, retain) NSUserDefaults *userPref;
 - (void)myTask;
 - (IBAction)showSimple:(id)sender;
 - (IBAction)showWithLabel:(id)sender;

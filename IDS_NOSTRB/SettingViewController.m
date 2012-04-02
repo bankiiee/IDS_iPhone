@@ -13,7 +13,7 @@
 
 @implementation SettingViewController
 
-@synthesize HUD;
+@synthesize HUD,userPref;
 - (id)initWithStyle:(UITableViewStyle)style
 {   
     style = UITableViewStyleGrouped;
@@ -48,6 +48,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.userPref = [NSUserDefaults standardUserDefaults];
+    [self.userPref synchronize];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -125,9 +127,11 @@
         [cell.imageView setImage:[UIImage imageNamed:@"157-wrench.png"]];
     }
     if(indexPath.section == 2){
-        [cell.textLabel setText:@"Logout"];
+        NSString *usernamelogout = [NSString stringWithFormat:@"Logout : %@",[self.userPref objectForKey:@"username"]];
+        [cell.textLabel setText:usernamelogout];
         [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
         [cell.imageView setImage:[UIImage imageNamed:@"63-runner.png"]];
+        
         
     }if(indexPath.section == 1){
         if(indexPath.row == 0){
@@ -252,6 +256,8 @@
 
 - (void)myTask {
     // Do something usefull in here instead of sleeping ...
+    [self.userPref setBool:NO forKey:@"isLogin"];
+    [self.userPref synchronize];
     sleep(5);
     exit(0);
 }
