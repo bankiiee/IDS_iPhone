@@ -15,5 +15,7 @@
 @property (nonatomic,retain)NSString *lid;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *roomLabel;
+@property (weak, nonatomic) IBOutlet UIButton *statusButton;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+- (IBAction)doChangeStatus:(id)sender;
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "LecturerDetailViewController.h"
+#import "SampleWebViewController.h"
 
 @interface LecturerDetailViewController ()
 
@@ -15,6 +16,7 @@
 @implementation LecturerDetailViewController
 @synthesize nameLabel;
 @synthesize roomLabel;
+@synthesize statusButton;
 @synthesize statusLabel;
 @synthesize name,room,status,lid;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -39,6 +41,12 @@
         [self.statusLabel setTextColor:[UIColor redColor]];
 
     }
+NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+[user synchronize];
+NSString *uname = [user objectForKey:@"username"];
+if([uname hasPrefix:@"it"]){
+    [self.statusButton removeFromSuperview];
+}
 }
 
 - (void)viewDidUnload
@@ -46,6 +54,7 @@
     [self setNameLabel:nil];
     [self setRoomLabel:nil];
     [self setStatusLabel:nil];
+    [self setStatusButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -56,4 +65,9 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction)doChangeStatus:(id)sender {
+    SampleWebViewController *sam = [[SampleWebViewController alloc]init];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:sam];
+    [self.navigationController presentModalViewController:nav animated:YES];   
+}
 @end

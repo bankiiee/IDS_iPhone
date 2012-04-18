@@ -10,6 +10,7 @@
 #import "SettingViewController.h"
 #import "LecturerDetailViewController.h"
 
+
 @implementation LecturerListViewController
 @synthesize bodyField;
 @synthesize HeadingText;

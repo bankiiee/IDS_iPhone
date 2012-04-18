@@ -10,6 +10,9 @@
 		320AF8492C47A4D819F7C451 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 320AF8492C47A4D819F7C450 /* QuartzCore.framework */; };
 		81005EBC150BBF500063CB02 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81005EBB150BBF500063CB02 /* CFNetwork.framework */; };
 		816FE62414D077EE00E496B8 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 816FE62314D077EE00E496B8 /* MBProgressHUD.m */; };
+		81772CE21535D89D00F28EB6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81772CE01535D89D00F28EB6 /* LoginViewController.m */; };
+		81772CE31535D89D00F28EB6 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81772CE11535D89D00F28EB6 /* LoginViewController.xib */; };
+		81772CE61535DDBC00F28EB6 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81772CE51535DDBC00F28EB6 /* 4.jpg */; };
 		8190F1CB14CF125F0040551A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8190F1CA14CF125F0040551A /* Settings.bundle */; };
 		8190F23E14CF1CCA0040551A /* libxml2.2.7.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8190F23D14CF1CCA0040551A /* libxml2.2.7.3.dylib */; };
 		8190F24114CF1D3A0040551A /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8190F23F14CF1D3A0040551A /* libxml2.2.dylib */; };
@@ -283,6 +286,10 @@
 		81005EBB150BBF500063CB02 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		816FE62214D077EE00E496B8 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		816FE62314D077EE00E496B8 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		81772CDF1535D89D00F28EB6 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		81772CE01535D89D00F28EB6 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		81772CE11535D89D00F28EB6 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		81772CE51535DDBC00F28EB6 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
 		8190F1CA14CF125F0040551A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ../Settings.bundle; sourceTree = "<group>"; };
 		8190F23D14CF1CCA0040551A /* libxml2.2.7.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.7.3.dylib; path = usr/lib/libxml2.2.7.3.dylib; sourceTree = SDKROOT; };
 		8190F23F14CF1D3A0040551A /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
@@ -603,6 +610,10 @@
 		81F7571414CE8AE700ABB7F7 = {
 			isa = PBXGroup;
 			children = (
+				81772CDF1535D89D00F28EB6 /* LoginViewController.h */,
+				81772CE01535D89D00F28EB6 /* LoginViewController.m */,
+				81772CE11535D89D00F28EB6 /* LoginViewController.xib */,
+				81772CE51535DDBC00F28EB6 /* 4.jpg */,
 				81F8DCD11528FC1C000BD077 /* Default@2x.png */,
 				81F8DCCF1528FC19000BD077 /* Default.png */,
 				81F229561528BCE100063038 /* Twitter.framework */,
@@ -1261,6 +1272,8 @@
 				81F8DCCE1528FC10000BD077 /* WelcomePage@2X_For_Retina.png in Resources */,
 				81F8DCD01528FC19000BD077 /* Default.png in Resources */,
 				81F8DCD21528FC1C000BD077 /* Default@2x.png in Resources */,
+				81772CE31535D89D00F28EB6 /* LoginViewController.xib in Resources */,
+				81772CE61535DDBC00F28EB6 /* 4.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1313,6 +1326,7 @@
 				819ABB431505C01600BE16B3 /* AboutViewController.m in Sources */,
 				81E662E3150EF10800CCD64F /* DispatchViewController.m in Sources */,
 				81F8DCBF1528EDE8000BD077 /* LecturerDetailViewController.m in Sources */,
+				81772CE21535D89D00F28EB6 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

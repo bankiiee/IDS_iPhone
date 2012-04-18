@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "MBProgressHUD.h"
-
 @interface MainViewController : UITableViewController <MBProgressHUDDelegate,UITabBarControllerDelegate, UIActionSheetDelegate>
 {
     BOOL isWaitingForTitle;

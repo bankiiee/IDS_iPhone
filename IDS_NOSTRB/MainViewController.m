@@ -10,7 +10,6 @@
 #import "DetailViewController.h"
 #import "SettingViewController.h"
 
-
 @implementation MainViewController
 @synthesize bodyField;
 @synthesize HeadingText;
@@ -182,7 +181,9 @@
 {
     if(isReadingTitle == YES){
     NSLog(@"Found TITLE %@", string);
-        [self.feedElement setObject:string forKey:@"title"];
+        NSMutableString *str = [[NSMutableString alloc]init];
+        [str appendString:string];
+        [self.feedElement setObject:str forKey:@"title"];
     }
     if(isReadingDescription == YES){
         NSLog(@"Found DESCRIPTION %@", string);

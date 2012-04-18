@@ -39,7 +39,7 @@
 - (void)myTask;
 - (IBAction)showSimple:(id)sender;
 - (IBAction)showWithLabel:(id)sender AndUsername:(NSString *)username;
-
+-(void)switchView;
 - (void) fetchRecords;  
 - (void) addMember:(id)sender;  
 -(void) saveData;

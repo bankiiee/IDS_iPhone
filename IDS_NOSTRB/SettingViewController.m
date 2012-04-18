@@ -9,6 +9,7 @@
 #import "SettingViewController.h"
 #import "DeveloperSettingViewController.h"
 #import "MBProgressHUD.h"
+#import "LoginViewController.h"
 
 
 @implementation SettingViewController
@@ -250,7 +251,7 @@
 	
     HUD.delegate = self;
     HUD.labelText = @"Logging Out, then App will exit.";
-	
+    [self.userPref setBool:NO forKey:@"isLogin"];
     [HUD showWhileExecuting:@selector(myTask) onTarget:self withObject:nil animated:YES];
 }
 
@@ -259,7 +260,9 @@
     [self.userPref setBool:NO forKey:@"isLogin"];
     [self.userPref synchronize];
     sleep(5);
-    exit(0);
+    LoginViewController *login = [[LoginViewController alloc]init];
+    self.view.window.rootViewController = login;
+//    exit(0);
 }
 
 @end

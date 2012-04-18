@@ -19,6 +19,7 @@
 #import "SettingViewController.h"
 #import "AboutViewcontroller.h"
 #import "DispatchViewController.h"
+#import "LoginViewController.h"
 
 
 
@@ -52,26 +53,31 @@
     
   //  NSLog(@"From userdefaults %@",[self.userPref boolForKey:@"isLogin"]);
     if(![self.userPref boolForKey:@"isLogin"]){
-        [self loginButtonPressed];
+        //[self loginButtonPressed];
+         LoginViewController *loginView = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
+        
     }
-    self.main = [[MainViewController alloc]init];
-  NewsTypeViewController *newstype = [[NewsTypeViewController alloc]init];
-    SampleWebViewController *sampleWeb = [[SampleWebViewController alloc]init];
-    LecturerListViewController *lecturer = [[LecturerListViewController alloc]init];
-    AboutViewController *aboutView = [[AboutViewController alloc]init];
-    UINavigationController *nav1 = [[UINavigationController alloc]initWithRootViewController:main];
-    UINavigationController *nav2 = [[UINavigationController alloc]initWithRootViewController:newstype];
-    UINavigationController *nav3 = [[UINavigationController alloc]initWithRootViewController:lecturer];
-    UINavigationController *aboutNav = [[UINavigationController alloc]initWithRootViewController:aboutView];
-
-    self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:nav1,nav3,sampleWeb,aboutNav,nil];
-    //add navigation controller
-    self.navigationController = [[UINavigationController alloc]init];
+//    self.main = [[MainViewController alloc]init];
+//  NewsTypeViewController *newstype = [[NewsTypeViewController alloc]init];
+//    SampleWebViewController *sampleWeb = [[SampleWebViewController alloc]init];
+//    LecturerListViewController *lecturer = [[LecturerListViewController alloc]init];
+//    AboutViewController *aboutView = [[AboutViewController alloc]init];
+//    UINavigationController *nav1 = [[UINavigationController alloc]initWithRootViewController:main];
+//    UINavigationController *nav2 = [[UINavigationController alloc]initWithRootViewController:newstype];
+//    UINavigationController *nav3 = [[UINavigationController alloc]initWithRootViewController:lecturer];
+//    UINavigationController *aboutNav = [[UINavigationController alloc]initWithRootViewController:aboutView];
+//
+//    self.tabBarController = [[UITabBarController alloc] init];
+//    self.tabBarController.viewControllers = [NSArray arrayWithObjects:nav1,nav3,sampleWeb,aboutNav,nil];
+//    //add navigation controller
+//    self.navigationController = [[UINavigationController alloc]init];
     
     //self.window.rootViewController = self.navigationController;
-    //[self.navigationController pushViewController:self.tabBarController animated:YES];
-    self.window.rootViewController = self.tabBarController;
+   
+    //self.window.rootViewController = self.tabBarController;
+    LoginViewController *loginView = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
+
+    self.window.rootViewController = [[LoginViewController alloc]init];
     [self.window makeKeyAndVisible];
     
     // Set the application defaults
@@ -80,16 +86,29 @@
     [defaults registerDefaults:appDefaults];
     [defaults synchronize];
     
-    NSTimeInterval secondsPerDay = 24 * 60 * 60;
-    NSDate *today = [[NSDate alloc] init];
-    NSDate *tomorrow, *yesterday;
     
-    tomorrow = [today dateByAddingTimeInterval: secondsPerDay];
-    yesterday = [today dateByAddingTimeInterval: -secondsPerDay];
-    NSLog(@"Today : %@",today);
-    NSLog(@"Tomorrow : %@",tomorrow);  
     
     return YES;
+}
+-(void)switchView{
+    self.main = [[MainViewController alloc]init];
+      NewsTypeViewController *newstype = [[NewsTypeViewController alloc]init];
+       SampleWebViewController *sampleWeb = [[SampleWebViewController alloc]init];
+        LecturerListViewController *lecturer = [[LecturerListViewController alloc]init];
+        AboutViewController *aboutView = [[AboutViewController alloc]init];
+        UINavigationController *nav1 = [[UINavigationController alloc]initWithRootViewController:main];
+        UINavigationController *nav2 = [[UINavigationController alloc]initWithRootViewController:newstype];
+        UINavigationController *nav3 = [[UINavigationController alloc]initWithRootViewController:lecturer];
+        UINavigationController *aboutNav = [[UINavigationController alloc]initWithRootViewController:aboutView];
+    
+        self.tabBarController = [[UITabBarController alloc] init];
+        self.tabBarController.viewControllers = [NSArray arrayWithObjects:nav1,nav3,aboutNav,nil];
+        //add navigation controller
+        self.navigationController = [[UINavigationController alloc]init];
+    
+    self.window.rootViewController = self.navigationController;
+    
+    self.window.rootViewController = self.tabBarController;
 }
 -(void)loginButtonPressed{
     UIAlertView *loginForm = [[UIAlertView alloc]initWithTitle:@"Please Login" message:@"Please Login" delegate:self cancelButtonTitle:@"Login" otherButtonTitles:@"Cancel", nil];
@@ -100,15 +119,17 @@
     // [loginForm addSubview:self.passwordField];
     [loginForm setTag:1];
     [loginForm show];
+    [self.window.rootViewController dismissModalViewControllerAnimated:YES];
+    
    
 }
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if(alertView.tag == 1){
     if(buttonIndex == 0){
     UITextField *username = [alertView textFieldAtIndex:0];
-        [username setText:@"it51070089"];
+       // [username setText:@"it51070089"];
     UITextField *password = [alertView textFieldAtIndex:1];
-        [password setText:@"9ddt+9ddt"];
+       // [password setText:@"9ddt+9ddt"];
     BOOL result = [self doLogin:username.text andPassword:password.text];
        // BOOL result = YES;   
         if(result){

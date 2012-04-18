@@ -20,15 +20,15 @@
         // Custom initialization
         [self setTitle:@"Web View"];
         self.tabBarItem.image = [UIImage imageNamed:@"175-macbook.png"];  
-        UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithTitle:@"Setting" style:UIBarButtonItemStyleDone target:self action:@selector(loadSettingPanel)];
+        UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(loadSettingPanel)];
         self.navigationItem.rightBarButtonItem = right;
         UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshFeed:)];
         self.navigationItem.leftBarButtonItem = left;
         self.indicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-        self.indicator.center = self.view.center;
-        [self.view addSubview:self.indicator];
+       // self.indicator.center = self.view.center;
+       // [self.view addSubview:self.indicator];
 
-        [self.indicator startAnimating];
+       //[self.indicator startAnimating];
     }
     return self;
 }
@@ -52,8 +52,10 @@
     [self.view addSubview:self.indicator];
     self.indicator.center = self.view.center;
     [self.indicator startAnimating];
+    NSUserDefaults *userPref = [NSUserDefaults standardUserDefaults];
+    [userPref synchronize];
     //Load web view data
-    NSString *strWebsiteUlr = [NSString stringWithFormat:@"http://smo.it.kmitl.ac.th:8088/IDS/m"];
+    NSString *strWebsiteUlr = [NSString stringWithFormat:@"http://localhost:8084/IDS/lecturer/checkinout_1.jsp?userid=%@%",[userPref objectForKey:@"username"] ];
     
     // Load URL
     
@@ -67,9 +69,10 @@
     [self.webView loadRequest:requestObj];
 }
 -(void)loadSettingPanel{
-    SettingViewController *settingPanel = [[SettingViewController alloc]initWithStyle:UITableViewStyleGrouped];
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:settingPanel];
-    [self.navigationController presentModalViewController:nav animated:YES];    
+//    SettingViewController *settingPanel = [[SettingViewController alloc]initWithStyle:UITableViewStyleGrouped];
+//    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:settingPanel];
+//    [self.navigationController presentModalViewController:nav animated:YES];    
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 -(void)webViewDidStartLoad:(UIWebView *)webView{

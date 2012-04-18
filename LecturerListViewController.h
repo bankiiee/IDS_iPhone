@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "MBProgressHUD.h"
 
-
 @interface LecturerListViewController : UITableViewController{
     BOOL isWaitingForTitle;
     BOOL isWaitingForLink;
